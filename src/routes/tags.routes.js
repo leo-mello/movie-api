@@ -4,6 +4,8 @@ const TagsController = require('../controllers/TagsController');
 
 const tagsRoutes = Router();
 
-// tagsRoutes.post("/:user_id", TagsController.index);
+const tagsController = new TagsController();
+
+tagsRoutes.get('/:user_id', tagsController.index);
 
 module.exports = tagsRoutes;
